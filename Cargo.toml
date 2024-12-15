@@ -1,0 +1,11 @@
+[package]
+name = "openvm-example-fibonacci"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+openvm = { path = "../openvm/crates/toolchain/openvm" }
+
+[features]
+default = []
+std = ["openvm/std"]
