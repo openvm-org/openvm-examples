@@ -1,6 +1,11 @@
-use openvm::io::read;
+#![cfg_attr(not(feature = "std"), no_main)]
+#![cfg_attr(not(feature = "std"), no_std)]
 
-fn main() {
+use openvm::io::{read, reveal};
+
+openvm::entry!(main);
+
+pub fn main() {
     let n: u64 = read();
     let mut a: u64 = 0;
     let mut b: u64 = 1;
@@ -9,5 +14,6 @@ fn main() {
         a = b;
         b = c;
     }
-    println!("{}", a);
+    reveal(a as u32, 0);
+    reveal((a >> 32) as u32, 1);
 }
