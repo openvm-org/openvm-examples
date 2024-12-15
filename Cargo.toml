@@ -4,6 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+# Update the path after repo is public.
 openvm = { path = "../openvm/crates/toolchain/openvm" }
 
 [features]
