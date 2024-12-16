@@ -1,11 +1,19 @@
 [package]
-name = "openvm-example-fibonacci"
+name = "openvm-example-algebra"
 version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# Update the https after repo is public.
-openvm = { git = "ssh://git@github.com/openvm-org/openvm.git" }
+openvm = { git = "https://github.com/openvm-org/openvm.git", rev = "1c303bfa7fde5d8079b7c1eb13fe310111fdb8fe" }
+openvm-platform = { git = "https://github.com/openvm-org/openvm.git", rev = "1c303bfa7fde5d8079b7c1eb13fe310111fdb8fe" }
+openvm-algebra-guest = { git = "https://github.com/openvm-org/openvm.git", rev = "1c303bfa7fde5d8079b7c1eb13fe310111fdb8fe" }
+openvm-algebra-moduli-setup = { git = "https://github.com/openvm-org/openvm.git", rev = "1c303bfa7fde5d8079b7c1eb13fe310111fdb8fe" }
+openvm-algebra-complex-macros = { git = "https://github.com/openvm-org/openvm.git", rev = "1c303bfa7fde5d8079b7c1eb13fe310111fdb8fe" }
+serde = { version = "1.0.216", default-features = false, features = [
+    "derive",
+    "alloc",
+] }
+num-bigint-dig = { version = "0.8.4", default-features = false }
 
 [features]
 default = []

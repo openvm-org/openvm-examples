@@ -1,9 +1,13 @@
-[app_fri_params]
-log_blowup = 2
-num_queries = 42
-proof_of_work_bits = 16
-
-[app_vm_config.io]
 [app_vm_config.rv32i]
 [app_vm_config.rv32m]
-range_tuple_checker_sizes = [256, 2048]
+[app_vm_config.io]
+
+[app_vm_config.modular]
+supported_modulus = [
+    "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+]
+
+[app_vm_config.fp2]
+supported_modulus = [
+    "115792089237316195423570985008687907853269984665640564039457584007908834671663",
+]
