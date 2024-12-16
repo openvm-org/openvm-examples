@@ -4,8 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# Update the https after repo is public.
-openvm = { git = "ssh://git@github.com/openvm-org/openvm.git" }
+openvm = { git = "https://github.com/openvm-org/openvm.git" }
 
 [features]
 default = []
