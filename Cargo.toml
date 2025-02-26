@@ -6,6 +6,10 @@ edition = "2021"
 [dependencies]
 openvm = { git = "https://github.com/openvm-org/openvm.git" }
 
+[profile.profiling]
+inherits = "release"
+debug = true
+
 [features]
 default = []
 std = ["openvm/std"]

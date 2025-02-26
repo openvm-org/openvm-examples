@@ -1,12 +1,12 @@
 #![cfg_attr(not(feature = "std"), no_main)]
 #![cfg_attr(not(feature = "std"), no_std)]
 
-use openvm::io::{read, reveal};
+use openvm::io::reveal;
 
 openvm::entry!(main);
 
 pub fn main() {
-    let n: u64 = read();
+    let n: u64 = 100;
     let mut a: u64 = 0;
     let mut b: u64 = 1;
     for _ in 0..n {
