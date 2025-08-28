@@ -14,7 +14,7 @@ pub enum Error {
     #[error("io error: {0}")]
     Io(#[from] std::io::Error),
     #[error("openvm error: {0}")]
-    OpenvmSerde(#[from] openvm::serde::Error),
+    OpenVmSerde(#[from] openvm::serde::Error),
 }
 
 fn output_hex_bytes(hex_bytes: String, output_dest: OutputDest) -> Result<(), Error> {
