@@ -3,3 +3,5 @@
 Cargo.lock
 
 outputs
+
+input_*.json
