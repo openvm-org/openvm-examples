@@ -32,6 +32,9 @@ fn output_hex_bytes(hex_bytes: String, output_dest: OutputDest) -> Result<(), Er
     Ok(())
 }
 
+/// Encode `value` into a hex string of bytes to be used as the input of an
+/// OpenVM program. The output destination is specified by the `output_dest`
+/// parameter that either is printed to stdout or written to a JSON file.
 pub fn hex_str_encode_bytes<T: serde::Serialize + ?Sized>(
     value: &T,
     output_dest: OutputDest,
@@ -42,6 +45,10 @@ pub fn hex_str_encode_bytes<T: serde::Serialize + ?Sized>(
     output_hex_bytes(hex_bytes, output_dest)
 }
 
+/// Encode `field_elements` into a hex string of native field elements to be
+/// used as the input of an OpenVM program. The output destination is specified
+/// by the `output_dest` parameter that either is printed to stdout or written
+/// to a JSON file.
 pub fn hex_str_encode_field_elements<F: PrimeField32>(
     field_elements: &[F],
     output_dest: OutputDest,

@@ -8,6 +8,8 @@ use openvm_stark_sdk::{
     p3_baby_bear::BabyBear,
 };
 
+/// Generate input from a u64 value. This generated input could be used for the
+/// Fibonacci program.
 fn generate_input_from_u64() -> Result<(), Error> {
     let input: u64 = 10;
 
@@ -20,6 +22,7 @@ fn generate_input_from_u64() -> Result<(), Error> {
     Ok(())
 }
 
+/// Generate input for an example struct.
 fn generate_input_from_struct() -> Result<(), Error> {
     #[derive(Debug, serde::Serialize, serde::Deserialize)]
     struct ProgramInput {
@@ -43,6 +46,7 @@ fn generate_input_from_struct() -> Result<(), Error> {
     Ok(())
 }
 
+/// Generate input for an example slice of field elements.
 fn generate_input_from_field_elements<F: Field + PrimeField32>() -> Result<(), Error> {
     let input: Vec<F> = vec![
         F::from_canonical_u32(12),
