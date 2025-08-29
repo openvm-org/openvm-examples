@@ -1,3 +1,8 @@
-# An example program using OpenVM
+# OpenVM Example Program
 
-See the [book](https://book.openvm.dev/writing-apps/write-program.html) for more details.
+This repo demonstrates a simple OpenVM program along with some handy utilities for working with OpenVM programs.
+
+It contains two crates:
+
+- [`openvm-example-program`](./fibonacci/): an example Fibonacci program. See the [book](https://book.openvm.dev/writing-apps/write-program.html) for more details.
+- [`openvm-example-utils`](./utils/): a set utility functions to generate OpenVM program inputs in the right format. Since the Fibonacci program takes a `u64` as input, you can use the [`generate_input_from_u64`](./utils/examples/gen_input.rs#L13) function to generate the input.
