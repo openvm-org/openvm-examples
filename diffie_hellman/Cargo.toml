@@ -1,0 +1,14 @@
+[package]
+name = "guest_program_example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+openvm = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0", features = ["std"] }
+
+openvm-algebra-guest = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0" }
+serde = { version = "1.0.216", default-features = false }
+num-bigint = { version = "0.4.6", features = ["serde"] }
+
+openvm-sha2 = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0" }
+hex = { version = "0.4.3" }
