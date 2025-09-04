@@ -1,9 +1,11 @@
 [workspace]
-members = [ "diffie_hellman","fibonacci", "utils"]
+members = [ "diffie_hellman","fibonacci", "utils", "polynomial_sha256"]
 resolver = "2"
 
 [workspace.dependencies]
 openvm = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0" }
+openvm-algebra-guest = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0" }
+openvm-sha2 = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0" }
 
 openvm-stark-sdk = { git = "https://github.com/openvm-org/stark-backend.git", tag = "v1.2.0", default-features = false }
 
@@ -11,6 +13,7 @@ serde = "1.0.219"
 hex = "0.4.3"
 serde_json = "1.0.143"
 thiserror = "2.0.16"
+num-bigint = "0.4.6"
 
 openvm-algebra-guest = { git = "https://github.com/openvm-org/openvm.git", tag = "v1.4.0" }
 num-bigint = { version = "0.4.6", features = ["serde"] }
