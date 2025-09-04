@@ -1,8 +1,8 @@
 # OpenVM Example Program
 
-This repo demonstrates a simple OpenVM program along with some handy utilities for working with OpenVM programs.
+This repo demonstrates two simple OpenVM program along with some handy utilities for working with OpenVM programs.
 
-It contains two crates:
+It contains three crates:
 
 - [`openvm-example-program`](./fibonacci/): an example Fibonacci program. See the [book](https://docs.openvm.dev/book/writing-apps/overview) for more details.
 - [`openvm-example-program`](./diffie_hellman/): an example Diffie Hellman Key Exchange program. This program takes in two inputs as Alice's and Bob's private keys and generates a shared key hashed with SHA-256.
