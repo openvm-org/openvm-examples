@@ -1,5 +1,5 @@
 [package]
-name = "guest_program_example"
+name = "diffie-hellman-example"
 version = "0.1.0"
 edition = "2021"
 
