@@ -1,7 +1,7 @@
 // src/main.rs
 extern crate alloc;
 
-use openvm::{self as _, io::read};
+use openvm::io::{read, reveal_bytes32};
 use openvm_algebra_guest::{moduli_macros::*, IntMod};
 use openvm_sha2::sha256;
 
@@ -49,5 +49,5 @@ pub fn main() {
     println!("shared_secret: {:?}", shared_secret);
 
     let hashed_shared_secret = sha256(&[shared_secret]);
-    println!("hashed_shared_secret: {:?}", hashed_shared_secret);
+    reveal_bytes32(hashed_shared_secret);
 }
