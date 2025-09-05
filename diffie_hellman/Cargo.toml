@@ -1,0 +1,13 @@
+[package]
+name = "diffie-hellman-example"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+openvm = { workspace = true, features = ["std"] }
+
+openvm-algebra-guest = { workspace = true }
+serde = { workspace = true, default-features = false }
+num-bigint = { workspace = true , features = ["serde"] }
+openvm-sha2 = { workspace = true }
+hex = { workspace = true }
