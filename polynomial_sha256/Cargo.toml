@@ -9,3 +9,4 @@ openvm = { workspace = true, features = ["std"] }
 openvm-algebra-guest = { workspace = true }
 openvm-sha2 = { workspace = true }
 serde = { workspace = true, default-features = false, features = ["derive"] }
+num-bigint = { workspace = true }
