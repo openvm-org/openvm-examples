@@ -29,7 +29,7 @@ Make sure you have the OpenVM toolchain installed and configured.
 
 ```bash
 cd polynomial_sha256
-cargo build --release
+cargo openvm build
 ```
 
 ### Generate Inputs
