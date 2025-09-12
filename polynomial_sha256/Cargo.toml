@@ -1,0 +1,12 @@
+[package]
+name = "polynomial_sha256"
+version = "0.1.0"
+edition = "2021"
+description = "OpenVM example program demonstrating polynomial evaluation with modular arithmetic and SHA256"
+
+[dependencies]
+openvm = { workspace = true, features = ["std"] }
+openvm-algebra-guest = { workspace = true }
+openvm-sha2 = { workspace = true }
+serde = { workspace = true, default-features = false, features = ["derive"] }
+num-bigint = { workspace = true }
