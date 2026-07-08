@@ -49,9 +49,9 @@ fn generate_input_from_struct() -> Result<(), Error> {
 /// Generate input for an example slice of field elements.
 fn generate_input_from_field_elements<F: Field + PrimeField32>() -> Result<(), Error> {
     let input: Vec<F> = vec![
-        F::from_canonical_u32(12),
-        F::from_canonical_u32(13),
-        F::from_canonical_u32(14),
+        F::from_int(12u32),
+        F::from_int(13u32),
+        F::from_int(14u32),
     ];
 
     hex_str_encode_field_elements(&input, OutputDest::Stdout)?;

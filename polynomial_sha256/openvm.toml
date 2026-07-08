@@ -5,5 +5,5 @@
 [app_vm_config.modular]
 supported_moduli = ["998244353"]
 
-[app_vm_config.sha256]
+[app_vm_config.sha2]
 

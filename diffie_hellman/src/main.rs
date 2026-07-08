@@ -3,7 +3,7 @@ extern crate alloc;
 
 use openvm::io::{read, reveal_bytes32};
 use openvm_algebra_guest::{moduli_macros::*, IntMod};
-use openvm_sha2::sha256;
+use openvm_sha2::Sha256;
 
 moduli_declare! {
     Mod { modulus = "23" },
@@ -48,6 +48,6 @@ pub fn main() {
 
     println!("shared_secret: {:?}", shared_secret);
 
-    let hashed_shared_secret = sha256(&[shared_secret]);
+    let hashed_shared_secret = Sha256::digest(&[shared_secret]);
     reveal_bytes32(hashed_shared_secret);
 }
