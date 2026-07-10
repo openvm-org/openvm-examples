@@ -5,7 +5,7 @@ use openvm as _;
 
 use core::hint::black_box;
 use openvm_algebra_guest::{moduli_macros::*, IntMod};
-use openvm_sha2::sha256;
+use openvm_sha2::Sha256;
 
 moduli_declare! {
     Mod1 { modulus = "998244353" }
@@ -55,7 +55,7 @@ fn main() {
         let step_bytes = step.0;
         let step_val =
             u32::from_le_bytes([step_bytes[0], step_bytes[1], step_bytes[2], step_bytes[3]]); //convert into u32 from little endian, from underlying bytes of Mod1
-        let hash = sha256(&black_box(step.0));
+        let hash = Sha256::digest(&black_box(step.0));
 
         reveal_u32(step_val, 2 * i + 1);
         let hash_val = u32::from_le_bytes([hash[0], hash[1], hash[2], hash[3]]);
